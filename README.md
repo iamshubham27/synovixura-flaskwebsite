@@ -1,130 +1,602 @@
-# Synovixura Tech — Flask + Supabase
+<div align="center">
 
-Same design, copy, and interactions as the original Synovixura-Website
-repo (Bento Grid layout, dark mode, dashboard previews) — HTML/CSS/JS
-ported as-is. Backend is Flask, data lives in your **Supabase**
-Postgres project (`Synovixura`, table `contacts`) instead of
-Node/Express + Supabase JS or SQLite.
+# ✦ SYNOVIXURA
 
-## 1. Local setup
+### **Where Technology Meets Design**
+
+A modern, immersive technology website built with **Flask, Supabase & JavaScript** — redesigned from the ground up with a clean Bento-inspired interface, dark aesthetics, smooth interactions, and a production deployment on Render.
+
+<br/>
+
+<a href="https://synovixura-website-flsk.onrender.com">
+  <img src="https://img.shields.io/badge/%E2%9C%A6_Live_Demo-Synovixura-000000?style=for-the-badge&logo=render&logoColor=white" alt="Live Demo"/>
+</a>
+<a href="https://github.com/iamshubham27/synovixura-flaskwebsite">
+  <img src="https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Flask-Backend-000000?style=flat-square&logo=flask&logoColor=white"/>
+<img src="https://img.shields.io/badge/Supabase-Database-3ECF8E?style=flat-square&logo=supabase&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/Render-Deployed-46E3B7?style=flat-square&logo=render&logoColor=black"/>
+
+<br/><br/>
+
+> **Aesthetic interface. Practical architecture. Full-stack execution.**
+
+</div>
+
+---
+
+## ◈ Overview
+
+**Synovixura** is a modern technology-focused web application created to combine a visually striking frontend with a lightweight Python backend.
+
+The project preserves the original **Synovixura** visual language — including the Bento-style layout, dark interface, dashboard previews, animations and interactive components — while migrating the backend architecture to **Flask + Supabase**.
+
+The result is a complete full-stack application that can be developed locally and deployed as a production web service.
+
+### ✦ What makes it interesting?
+
+* ◈ Modern **Bento Grid** inspired UI
+* ◈ Dark, minimal and futuristic visual language
+* ◈ Smooth interactive frontend
+* ◈ Flask-powered backend
+* ◈ Supabase PostgreSQL database
+* ◈ Contact management system
+* ◈ REST-style API endpoints
+* ◈ Dashboard preview pages
+* ◈ Admin contact interface
+* ◈ Environment-variable based configuration
+* ◈ Deployed and accessible through **Render**
+
+---
+
+## ✧ Live Experience
+
+<div align="center">
+
+### 🚀 Explore Synovixura
+
+**[ OPEN LIVE WEBSITE → ](https://synovixura-website-flsk.onrender.com)**
+
+<br/>
+
+*Experience the interface instead of just reading about it.*
+
+</div>
+
+---
+
+## ◈ Preview
+
+<div align="center">
+
+<!-- Replace this image with an actual screenshot/GIF of your website for maximum impact -->
+
+<img src="https://placehold.co/1200x650/0b0b0f/ffffff?text=SYNOVIXURA+%E2%80%94+WEBSITE+PREVIEW" alt="Synovixura Preview" width="90%"/>
+
+</div>
+
+> **Tip:** Replace the placeholder above with a real screenshot or animated GIF from your deployed website. A real visual preview will make this README significantly more attractive.
+
+---
+
+## ◈ Tech Stack
+
+### Frontend
+
+| Technology     | Purpose                                             |
+| -------------- | --------------------------------------------------- |
+| **HTML5**      | Semantic website structure                          |
+| **CSS3**       | Layout, styling, responsive design & visual effects |
+| **JavaScript** | Interactions, API communication & dynamic behaviour |
+| **Jinja2**     | Flask-side HTML templating                          |
+
+### Backend
+
+| Technology     | Purpose                          |
+| -------------- | -------------------------------- |
+| **Python**     | Application backend              |
+| **Flask**      | Web framework & routing          |
+| **Supabase**   | Backend database platform        |
+| **PostgreSQL** | Persistent contact data          |
+| **REST API**   | Frontend ↔ backend communication |
+
+### Deployment
+
+| Platform     | Role                               |
+| ------------ | ---------------------------------- |
+| **Render**   | Production web hosting             |
+| **GitHub**   | Source control & deployment source |
+| **Supabase** | Cloud database                     |
+
+---
+
+## ◈ Architecture
+
+```text
+                         ┌──────────────────────┐
+                         │      USER / WEB      │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │   HTML / CSS / JS    │
+                         │      FRONTEND        │
+                         └──────────┬───────────┘
+                                    │
+                             HTTP / REST API
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │       FLASK          │
+                         │       BACKEND        │
+                         └──────────┬───────────┘
+                                    │
+                              Supabase API
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │      SUPABASE        │
+                         │    PostgreSQL DB     │
+                         └──────────────────────┘
+```
+
+The application follows a simple full-stack flow:
+
+**Browser → Frontend → Flask API → Supabase → Flask → Frontend**
+
+This keeps the presentation layer separate from the backend logic and database layer.
+
+---
+
+## ◈ Core Features
+
+### 01 — Immersive Landing Page
+
+A modern landing page focused on visual hierarchy, typography, spacing and interactive sections.
+
+### 02 — Bento-Style Layout
+
+Content is organized using modular cards and sections inspired by modern Bento-style interfaces.
+
+### 03 — Dark Aesthetic
+
+The interface uses a dark visual system designed around contrast, minimalism and technology-focused aesthetics.
+
+### 04 — Contact System
+
+Visitors can submit:
+
+```text
+Name
+Email
+Company
+Service
+Message
+Budget
+```
+
+Submissions are stored in the Supabase PostgreSQL database.
+
+### 05 — Contact Management
+
+The project includes an admin interface for viewing and managing submitted contacts.
+
+Supported statuses:
+
+```text
+new
+read
+replied
+archived
+```
+
+### 06 — REST API
+
+The frontend communicates with Flask through dedicated API routes.
+
+```text
+GET     /api/health
+GET     /api/contacts
+GET     /api/contacts/<id>
+
+POST    /api/contact
+
+PATCH   /api/contacts/<id>
+
+DELETE  /api/contacts/<id>
+```
+
+### 07 — Dashboard Previews
+
+The project includes dedicated dashboard preview pages:
+
+```text
+/dashboard-1
+/dashboard-2
+```
+
+These demonstrate the visual direction and product-oriented UI of the Synovixura ecosystem.
+
+---
+
+## ◈ Project Structure
+
+```text
+synovixura-flaskwebsite/
+│
+├── synovixura_flask/
+│   ├── templates/
+│   │   ├── ...
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── images/
+│   │
+│   └── ...
+│
+├── README.md
+├── requirements.txt
+├── app.py
+├── .env.example
+└── ...
+```
+
+> The exact structure may evolve as the project continues to grow.
+
+---
+
+## ◈ Run Locally
+
+### Prerequisites
+
+Make sure you have:
+
+* **Python 3.x**
+* **Git**
+* A **Supabase** project
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/iamshubham27/synovixura-flaskwebsite.git
+
+cd synovixura-flaskwebsite
+```
+
+### 2. Create a virtual environment
+
+#### Windows
 
 ```bash
 python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
+
+venv\Scripts\activate
+```
+
+#### macOS / Linux
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
-cp .env.example .env
 ```
 
-Edit `.env`:
+### 4. Configure environment variables
 
-```
-SUPABASE_URL=https://iqxsbgfudnhyosiclvfm.supabase.co
-SUPABASE_KEY=<your anon/publishable key — Supabase dashboard → Settings → API>
-SECRET_KEY=<any random string>
+Create a `.env` file based on `.env.example`.
+
+```env
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_supabase_key
+SECRET_KEY=your_secret_key
 ```
 
-Then:
+**Never commit your real `.env` file or secret keys to GitHub.**
+
+### 5. Start Flask
 
 ```bash
 python app.py
 ```
 
-Visit http://127.0.0.1:5000
+The application should now be available at:
 
-## About the database
-
-The `contacts` table already exists in your Supabase project with
-this schema:
-
-```
-id, name, email, company, service, message, budget,
-status (default 'new'), ip_address, user_agent,
-created_at, updated_at
+```text
+http://127.0.0.1:5000
 ```
 
-**Row Level Security is enabled with fully open policies** (public
-insert/select/update/delete) — this matches how the original repo's
-Supabase table was configured, since the site had no admin login
-either. That means anyone with your anon key can read, edit, or
-delete every contact submission. Fine for a demo/personal project;
-before using this for a real client-facing form, you'll want to:
+---
 
-- Add a real login to `/admin` (Flask-Login + a users table, or
-  HTTP basic auth at minimum), **and**
-- Tighten the RLS policies so `SELECT`/`UPDATE`/`DELETE` require an
-  authenticated/service role, keeping `INSERT` open for the public
-  contact form.
+## ◈ Database
 
-Ask me if you'd like help with either of those — happy to wire up a
-simple password gate and updated RLS policies.
+Synovixura uses **Supabase PostgreSQL** for persistent contact information.
 
-## 2. Deploying on PythonAnywhere
+The contact table contains fields such as:
 
-1. **Create a PythonAnywhere account** (the free tier works for this).
-2. **Upload the project.** Easiest path: push this project to a
-   GitHub repo, then in a PythonAnywhere **Bash console**:
-   ```bash
-   git clone <your-repo-url> synovixura
-   cd synovixura
-   ```
-   (Or use the Files tab to upload the zip and unzip it there.)
-3. **Create a virtualenv** (in the same Bash console):
-   ```bash
-   mkvirtualenv --python=/usr/bin/python3.10 synovixura-venv
-   pip install -r requirements.txt
-   ```
-4. **Create a new Web App:**
-   - Go to the **Web** tab → **Add a new web app**
-   - Choose **Manual configuration** (not the Flask wizard) → your
-     Python version
-   - Set **Source code** to the project folder path (e.g.
-     `/home/yourusername/synovixura`)
-   - Set **Virtualenv** to the path from step 3 (e.g.
-     `/home/yourusername/.virtualenvs/synovixura-venv`)
-5. **Edit the WSGI config file** (link is on the Web tab, something
-   like `/var/www/yourusername_pythonanywhere_com_wsgi.py`). Replace
-   its contents with:
-   ```python
-   import sys
-   import os
+```text
+id
+name
+email
+company
+service
+message
+budget
+status
+ip_address
+user_agent
+created_at
+updated_at
+```
 
-   project_home = '/home/yourusername/synovixura'
-   if project_home not in sys.path:
-       sys.path.insert(0, project_home)
+### Database flow
 
-   # Environment variables — free tier has no env-vars UI, so set
-   # them here directly (paid tiers can use the Web tab's env vars
-   # section instead and skip this block).
-   os.environ['SUPABASE_URL'] = 'https://iqxsbgfudnhyosiclvfm.supabase.co'
-   os.environ['SUPABASE_KEY'] = 'your-anon-key-here'
-   os.environ['SECRET_KEY'] = 'something-random'
+```text
+Contact Form
+     │
+     ▼
+POST /api/contact
+     │
+     ▼
+Flask Backend
+     │
+     ▼
+Supabase
+     │
+     ▼
+PostgreSQL
+```
 
-   from app import app as application
-   ```
-6. **Set the static files mapping** (Web tab → Static files):
-   - URL: `/static/`
-   - Directory: `/home/yourusername/synovixura/static`
-7. Hit the green **Reload** button on the Web tab, then visit
-   `https://yourusername.pythonanywhere.com`.
+---
 
-PythonAnywhere's free tier allows outbound HTTPS to Supabase, so the
-`/api/contact` and `/api/contacts` routes will work as-is.
+## ◈ API Reference
 
-## Pages
+### Health Check
 
-- `/` — home
-- `/contact` — contact form
-- `/dashboard-1`, `/dashboard-2` — static dashboard previews
-- `/admin` — contact submissions list (no login — see security note above)
+```http
+GET /api/health
+```
 
-## API (unchanged contract, now backed by Supabase)
+Used to verify that the backend is running correctly.
 
-- `GET /api/health`
-- `GET /api/contacts`
-- `GET /api/contacts/<id>`
-- `POST /api/contact` — `{name, email, company, service, message, budget}`
-- `PATCH /api/contacts/<id>` — `{status}` (`new|read|replied|archived`)
-- `DELETE /api/contacts/<id>`
+---
 
-The front-end JS in `contact.html` and `admin.html` is untouched — it
-already talks to these exact routes.
+### Get Contacts
+
+```http
+GET /api/contacts
+```
+
+Returns stored contact submissions.
+
+---
+
+### Get Single Contact
+
+```http
+GET /api/contacts/<id>
+```
+
+Returns a specific contact submission.
+
+---
+
+### Create Contact
+
+```http
+POST /api/contact
+```
+
+Example request:
+
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "company": "Example Inc.",
+  "service": "Web Development",
+  "message": "I would like to discuss a project.",
+  "budget": "$5,000 - $10,000"
+}
+```
+
+---
+
+### Update Contact
+
+```http
+PATCH /api/contacts/<id>
+```
+
+Example:
+
+```json
+{
+  "status": "replied"
+}
+```
+
+Supported values:
+
+```text
+new
+read
+replied
+archived
+```
+
+---
+
+### Delete Contact
+
+```http
+DELETE /api/contacts/<id>
+```
+
+Removes the selected contact entry.
+
+---
+
+## ◈ Deployment
+
+The application is deployed using **Render**.
+
+### Deployment flow
+
+```text
+GitHub Repository
+       │
+       ▼
+     Render
+       │
+       ▼
+   Flask App
+       │
+       ▼
+   Supabase
+```
+
+### Live deployment
+
+**https://synovixura-website-flsk.onrender.com**
+
+The project is configured to run as a Flask web application with its required environment variables supplied through the deployment environment.
+
+---
+
+## ◈ Security Note
+
+This project is primarily intended as a **portfolio / demonstration project**.
+
+If the contact-management API is exposed publicly, production deployment should include stronger access control around administrative operations.
+
+Recommended improvements include:
+
+* Authentication for `/admin`
+* Authorization for contact-management APIs
+* Restrictive Supabase Row Level Security policies
+* Server-side validation
+* Rate limiting
+* CSRF protection where applicable
+* Strong production secrets
+* Protection against unauthorized `SELECT`, `UPDATE` and `DELETE` operations
+
+**Do not expose private Supabase credentials in frontend code or commit them to GitHub.**
+
+---
+
+## ◈ Design Philosophy
+
+Synovixura is built around a simple principle:
+
+> ### **Technology should feel as good as it works.**
+
+The interface intentionally combines:
+
+```text
+Minimalism
+     +
+Motion
+     +
+Typography
+     +
+Dark UI
+     +
+Information Density
+     +
+Functional Backend
+```
+
+The goal is not just to create another functional website, but to make the **engineering and visual experience feel like one product**.
+
+---
+
+## ◈ Roadmap
+
+Potential future improvements:
+
+* [ ] Secure admin authentication
+* [ ] Advanced contact dashboard
+* [ ] Better API authentication
+* [ ] Improved database security policies
+* [ ] Analytics dashboard
+* [ ] More interactive page transitions
+* [ ] Enhanced mobile experience
+* [ ] Performance optimization
+* [ ] SEO improvements
+* [ ] Automated testing
+* [ ] CI/CD pipeline
+* [ ] Custom domain
+
+---
+
+## ◈ Contributing
+
+Contributions, suggestions and improvements are welcome.
+
+```bash
+# Fork the repository
+
+# Create a feature branch
+git checkout -b feature/amazing-feature
+
+# Commit your changes
+git commit -m "Add amazing feature"
+
+# Push the branch
+git push origin feature/amazing-feature
+
+# Open a Pull Request
+```
+
+---
+
+## ◈ Author
+
+<div align="center">
+
+### **Shubham Biswas**
+
+B.Tech Computer Science Engineering
+
+**Government Engineering College, Jhalawar**
+
+<br/>
+
+<a href="https://github.com/iamshubham27">
+  <img src="https://img.shields.io/badge/GitHub-iamshubham27-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+### ✦ SYNOVIXURA
+
+**Built with code. Designed with intent.**
+
+<br/>
+
+<a href="https://synovixura-website-flsk.onrender.com">
+  <strong>Visit the Live Website →</strong>
+</a>
+
+<br/><br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:111111,100:444444&height=120&section=footer" width="100%"/>
+
+</div>
