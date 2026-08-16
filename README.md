@@ -71,20 +71,6 @@ The result is a complete full-stack application that can be developed locally an
 
 ---
 
-## ◈ Preview
-
-<div align="center">
-
-<!-- Replace this image with an actual screenshot/GIF of your website for maximum impact -->
-
-<img src="https://placehold.co/1200x650/0b0b0f/ffffff?text=SYNOVIXURA+%E2%80%94+WEBSITE+PREVIEW" alt="Synovixura Preview" width="90%"/>
-
-</div>
-
-> **Tip:** Replace the placeholder above with a real screenshot or animated GIF from your deployed website. A real visual preview will make this README significantly more attractive.
-
----
-
 ## ◈ Tech Stack
 
 ### Frontend
