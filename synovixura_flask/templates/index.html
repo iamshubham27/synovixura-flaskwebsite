@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synovixura Tech — Software Engineering Studio</title>
+<meta name="description" content="Synovixura Tech designs and builds custom software, ERP systems, and internal dashboards for growing businesses.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">S</span>
+      <span class="brand-name">Synovixura<span class="brand-suffix">Tech</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Work</a>
+      <a href="{{ url_for('contact') }}" target="_blank">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <a href="{{ url_for('contact') }}" target="_blank" class="btn btn-primary btn-sm">Start a Project</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">SOFTWARE ENGINEERING STUDIO</p>
+        <h1 class="hero-title reveal">We build the control panels behind growing businesses.</h1>
+        <p class="hero-sub reveal">Synovixura Tech designs and ships custom software, ERPs, and internal dashboards for teams that have outgrown spreadsheets. No bloated platforms. No six-month onboarding.</p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View Our Work</a>
+          <a href="{{ url_for('contact') }}" target="_blank" class="btn btn-ghost">Start a Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-console reveal" aria-hidden="true">
+        <div class="console-head">
+          <span class="status-dot"></span>
+          <span class="console-label">SYSTEM STATUS — OPERATIONAL</span>
+        </div>
+        <div class="console-row">
+          <span class="console-key">Active Workflows</span>
+          <span class="console-value" id="consoleWorkflows">128</span>
+        </div>
+        <div class="console-row">
+          <span class="console-key">Uptime</span>
+          <span class="console-value">99.9%</span>
+        </div>
+        <div class="console-row">
+          <span class="console-key">Avg. Response</span>
+          <span class="console-value" id="consoleResponse">128ms</span>
+        </div>
+        <div class="console-divider"></div>
+        <div class="console-sparkline" id="sparkline">
+          <span style="--h:40%"></span><span style="--h:65%"></span><span style="--h:52%"></span>
+          <span style="--h:80%"></span><span style="--h:60%"></span><span style="--h:90%"></span>
+          <span style="--h:70%"></span><span style="--h:95%"></span>
+        </div>
+        <div class="console-caption">WEEKLY LOAD</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENTO GRID - ABOUT SECTION ============ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">ABOUT</p>
+        <h2 class="section-title">We ship the tools your team actually uses every day.</h2>
+        <p class="section-sub">Synovixura Tech is a small engineering studio that designs and builds internal software — ERPs, dashboards, and admin tools — for businesses that need something spreadsheets can't handle anymore.</p>
+      </div>
+
+      <div class="bento-grid about-bento">
+        <div class="bento-item bento-large reveal">
+          <div class="bento-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>Small team, direct access</h3>
+          <p>You talk to the engineers building your system. No account managers in between.</p>
+        </div>
+        <div class="bento-item reveal">
+          <div class="bento-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Built around your workflow</h3>
+          <p>Every system is shaped by how your team actually works.</p>
+        </div>
+        <div class="bento-item reveal">
+          <div class="bento-icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>Support that doesn't end</h3>
+          <p>We stay on after go-live to fix and tune as your business changes.</p>
+        </div>
+        <div class="bento-item bento-wide reveal">
+          <div class="bento-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Built for scale</h3>
+          <p>Our systems grow with your business — from 10 users to 10,000.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENTO GRID - SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">SERVICES</p>
+        <h2 class="section-title">What we build</h2>
+        <p class="section-sub">End-to-end solutions designed for the way your team actually works.</p>
+      </div>
+
+      <div class="bento-grid services-bento">
+        <div class="bento-item bento-tall reveal">
+          <div class="bento-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Custom Software Development</h3>
+          <p>Web and desktop applications built for your exact workflow, not a generic template.</p>
+          <span class="bento-tag">Web • Desktop</span>
+        </div>
+        <div class="bento-item reveal">
+          <div class="bento-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <h3>ERP &amp; Operations</h3>
+          <p>Inventory, invoicing, and purchase tracking in one place.</p>
+          <span class="bento-tag">Operations</span>
+        </div>
+        <div class="bento-item reveal">
+          <div class="bento-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Dashboards &amp; Tools</h3>
+          <p>Admin panels that turn raw data into decisions.</p>
+          <span class="bento-tag">Analytics</span>
+        </div>
+        <div class="bento-item reveal">
+          <div class="bento-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3>Cloud &amp; DevOps</h3>
+          <p>Deployment and infrastructure so your systems stay fast and online.</p>
+          <span class="bento-tag">Infrastructure</span>
+        </div>
+        <div class="bento-item bento-wide reveal">
+          <div class="bento-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Interfaces your team will actually enjoy using, from the first login onward.</p>
+          <span class="bento-tag">Design</span>
+        </div>
+        <div class="bento-item reveal">
+          <div class="bento-icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>Support &amp; Maintenance</h3>
+          <p>Direct access to the people who built your system, long after launch.</p>
+          <span class="bento-tag">Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENTO GRID - PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2 class="section-title">Products we've shipped</h2>
+        <p class="section-sub">Two internal platforms built for real operating teams. Click through to view the interface.</p>
+      </div>
+
+      <div class="bento-grid projects-bento">
+        <!-- Project 1 -->
+        <div class="bento-item bento-large project-card reveal">
+          <a href="{{ url_for('dashboard1') }}" target="_blank" rel="noopener" class="project-preview-link">
+            <div class="project-preview preview-blue">
+              <div class="preview-chrome"><span></span><span></span><span></span></div>
+              <div class="preview-body">
+                <div class="preview-sidebar"></div>
+                <div class="preview-main">
+                  <div class="preview-topbar"></div>
+                  <div class="preview-stats">
+                    <div class="preview-stat"></div>
+                    <div class="preview-stat"></div>
+                    <div class="preview-stat"></div>
+                    <div class="preview-stat"></div>
+                  </div>
+                  <div class="preview-chart"></div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="project-info">
+            <span class="project-tag tag-blue">Operations Platform</span>
+            <h3>ERP System</h3>
+            <p>An inventory, sales, and purchase management system built for retail and distribution businesses.</p>
+            <a href="{{ url_for('dashboard1') }}" target="_blank" rel="noopener" class="project-link">View Dashboard <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bento-item bento-large project-card reveal">
+          <a href="{{ url_for('dashboard2') }}" target="_blank" rel="noopener" class="project-preview-link">
+            <div class="project-preview preview-amber">
+              <div class="preview-chrome"><span></span><span></span><span></span></div>
+              <div class="preview-body">
+                <div class="preview-sidebar"></div>
+                <div class="preview-main">
+                  <div class="preview-topbar"></div>
+                  <div class="preview-stats">
+                    <div class="preview-stat"></div>
+                    <div class="preview-stat"></div>
+                    <div class="preview-stat"></div>
+                    <div class="preview-stat"></div>
+                  </div>
+                  <div class="preview-chart"></div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="project-info">
+            <span class="project-tag tag-amber">Sales &amp; Customer Analytics</span>
+            <h3>Pulse CRM</h3>
+            <p>A customer and deals dashboard that gives sales teams a clear view of pipeline and performance.</p>
+            <a href="{{ url_for('dashboard2') }}" target="_blank" rel="noopener" class="project-link">View Dashboard <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="bento-item reveal">
+          <div class="bento-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Real-time analytics</h3>
+          <p>Live data updates that keep your team in the know.</p>
+        </div>
+        <div class="bento-item reveal">
+          <div class="bento-icon"><i class="fa-solid fa-shield"></i></div>
+          <h3>Enterprise security</h3>
+          <p>Your data is protected with industry-standard encryption.</p>
+        </div>
+        <div class="bento-item bento-wide reveal">
+          <div class="bento-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+          <h3>Seamless integrations</h3>
+          <p>Connect with your existing tools — Slack, Stripe, Salesforce, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow-inverse">CONTACT</p>
+        <h2 class="section-title title-inverse">Have a system in mind?</h2>
+        <p class="contact-sub">Tell us what's slowing your team down. We'll tell you honestly if we can fix it.</p>
+      </div>
+
+      <div class="contact-details reveal">
+        <a href="mailto:synovixuratech@gmail.com" class="contact-row">
+          <i class="fa-solid fa-envelope"></i>
+          <span>synovixuratech@gmail.com</span>
+        </a>
+        <a href="tel:+919664177850" class="contact-row">
+          <i class="fa-solid fa-phone"></i>
+          <span>+91 96641 77850</span>
+        </a>
+        <div class="contact-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Rajasthan, India</span>
+        </div>
+        <a href="{{ url_for('contact') }}" target="_blank" class="btn btn-primary btn-block" id="contactBtn">
+          <i class="fa-solid fa-paper-plane"></i> Send us a message
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">S</span>
+      <span class="brand-name">Synovixura<span class="brand-suffix">Tech</span></span>
+    </div>
+
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Work</a>
+      <a href="{{ url_for('contact') }}" target="_blank">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© 2026 Synovixura Tech. All rights reserved.</span>
+      <span class="footer-mono">BUILT WITH PRECISION</span>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
